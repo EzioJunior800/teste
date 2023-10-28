@@ -1,0 +1,25 @@
+<nz-tabset
+    [nzTabPosition]="nzTabPosition"
+    [(nzSelectedIndex)]="selectedIndex"
+    (nzSelectChange)="log([$event])"
+    nzType="editable-card"
+    (nzClose)="closeTab($event)"
+>
+    <nz-tab
+        *ngFor="let tab of tabs"
+        [nzTitle]="tab.name"
+        [nzDisabled]="tab.disabled"
+        (nzSelect)="log(['select', tab])"
+        nzClosable
+    >
+        {{ tab.content }}
+        <ng-container [ngSwitch]="route?.templateRoute">
+            <div *ngSwitchCase="'CompanyGroup'">
+                teste
+            </div>
+            <div *ngSwitchCase="'Companies'">
+                <app-company></app-company>
+            </div>
+        </ng-container>
+    </nz-tab>
+</nz-tabset>
