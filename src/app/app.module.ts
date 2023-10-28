@@ -16,6 +16,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 registerLocaleData(en);
 
+
 @NgModule({
     declarations: [AppComponent],
     imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule, AppLayoutModule, FormsModule, HttpClientModule, BrowserAnimationsModule, StoreModule.forRoot({}, {})],
