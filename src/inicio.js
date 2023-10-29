@@ -1,1 +1,1 @@
-alert(1)
+alerts(0)
